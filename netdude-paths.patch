@@ -1,0 +1,142 @@
+diff -Naur netdude-0.3.3/plugins/Makefile.am netdude-0.3.3-p/plugins/Makefile.am
+--- netdude-0.3.3/plugins/Makefile.am	Wed Jun 25 18:55:59 2003
++++ netdude-0.3.3-p/plugins/Makefile.am	Wed Jun 25 18:56:13 2003
+@@ -9,7 +9,7 @@
+ LDFLAGS		     = -L$(top_srcdir)/src
+ INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_builddir)/include
+ 
+-pkgdir		     = $(pkgdatadir)/plugins
++pkgdir		     = $(pkglibdir)/plugins
+ 
+ pkg_LTLIBRARIES	     = nd_cksumfix.la nd_dummyplugin.la
+ 
+diff -Naur netdude-0.3.3/protocols/arp/Makefile.am netdude-0.3.3-p/protocols/arp/Makefile.am
+--- netdude-0.3.3/protocols/arp/Makefile.am	Wed Jun 25 18:55:59 2003
++++ netdude-0.3.3-p/protocols/arp/Makefile.am	Wed Jun 25 18:56:52 2003
+@@ -6,7 +6,7 @@
+ LDFLAGS		     = -L$(top_srcdir)/src
+ INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_builddir)/include -W -Wall
+ 
+-pkgdir		     = $(pkgdatadir)/protocols
++pkgdir		     = $(pkglibdir)/protocols
+ pkgincludedir        = $(includedir)/netdude/protocols/arp
+ 
+ pkg_LTLIBRARIES	     = nd_arp.la 
+diff -Naur netdude-0.3.3/protocols/ether/Makefile.am netdude-0.3.3-p/protocols/ether/Makefile.am
+--- netdude-0.3.3/protocols/ether/Makefile.am	Wed Jun 25 18:55:59 2003
++++ netdude-0.3.3-p/protocols/ether/Makefile.am	Wed Jun 25 18:57:07 2003
+@@ -8,7 +8,7 @@
+ LDFLAGS		     = -L$(top_srcdir)/src
+ INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_builddir)/include -W -Wall
+ 
+-pkgdir		     = $(pkgdatadir)/protocols
++pkgdir		     = $(pkglibdir)/protocols
+ 
+ pkg_LTLIBRARIES	     = nd_ethernet.la 
+ 
+diff -Naur netdude-0.3.3/protocols/fddi/Makefile.am netdude-0.3.3-p/protocols/fddi/Makefile.am
+--- netdude-0.3.3/protocols/fddi/Makefile.am	Wed Jun 25 18:55:59 2003
++++ netdude-0.3.3-p/protocols/fddi/Makefile.am	Wed Jun 25 18:57:14 2003
+@@ -6,7 +6,7 @@
+ LDFLAGS		     = -L$(top_srcdir)/src
+ INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_builddir)/include -W -Wall
+ 
+-pkgdir		     = $(pkgdatadir)/protocols
++pkgdir		     = $(pkglibdir)/protocols
+ pkgincludedir        = $(includedir)/netdude/protocols/fddi
+ 
+ pkg_LTLIBRARIES	     = nd_fddi.la 
+diff -Naur netdude-0.3.3/protocols/icmp/Makefile.am netdude-0.3.3-p/protocols/icmp/Makefile.am
+--- netdude-0.3.3/protocols/icmp/Makefile.am	Wed Jun 25 18:55:59 2003
++++ netdude-0.3.3-p/protocols/icmp/Makefile.am	Wed Jun 25 18:57:12 2003
+@@ -6,7 +6,7 @@
+ LDFLAGS		     = -L$(top_srcdir)/src
+ INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_srcdir)/include -W -Wall
+ 
+-pkgdir		     = $(pkgdatadir)/protocols
++pkgdir		     = $(pkglibdir)/protocols
+ pkgincludedir        = $(includedir)/netdude/protocols/icmp
+ 
+ pkg_LTLIBRARIES	     = nd_icmp.la 
+diff -Naur netdude-0.3.3/protocols/ip/Makefile.am netdude-0.3.3-p/protocols/ip/Makefile.am
+--- netdude-0.3.3/protocols/ip/Makefile.am	Wed Jun 25 18:55:59 2003
++++ netdude-0.3.3-p/protocols/ip/Makefile.am	Wed Jun 25 18:56:46 2003
+@@ -8,7 +8,7 @@
+ LDFLAGS		     = -L$(top_srcdir)/src
+ INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_builddir)/include -W -Wall
+ 
+-pkgdir		     = $(pkgdatadir)/protocols
++pkgdir		     = $(pkglibdir)/protocols
+ 
+ pkg_LTLIBRARIES	     = nd_ip.la 
+ 
+diff -Naur netdude-0.3.3/protocols/linux-sll/Makefile.am netdude-0.3.3-p/protocols/linux-sll/Makefile.am
+--- netdude-0.3.3/protocols/linux-sll/Makefile.am	Wed Jun 25 18:55:59 2003
++++ netdude-0.3.3-p/protocols/linux-sll/Makefile.am	Wed Jun 25 18:57:04 2003
+@@ -6,7 +6,7 @@
+ LDFLAGS		     = -L$(top_srcdir)/src
+ INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_builddir)/include -W -Wall
+ 
+-pkgdir		     = $(pkgdatadir)/protocols
++pkgdir		     = $(pkglibdir)/protocols
+ pkgincludedir        = $(includedir)/netdude/protocols/sll
+ 
+ pkg_LTLIBRARIES	     = nd_sll.la 
+diff -Naur netdude-0.3.3/protocols/snap/Makefile.am netdude-0.3.3-p/protocols/snap/Makefile.am
+--- netdude-0.3.3/protocols/snap/Makefile.am	Wed Jun 25 18:55:59 2003
++++ netdude-0.3.3-p/protocols/snap/Makefile.am	Wed Jun 25 18:57:10 2003
+@@ -6,7 +6,7 @@
+ LDFLAGS		     = -L$(top_srcdir)/src
+ INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_builddir)/include -W -Wall
+ 
+-pkgdir		     = $(pkgdatadir)/protocols
++pkgdir		     = $(pkglibdir)/protocols
+ pkgincludedir        = $(includedir)/netdude/protocols/snap
+ 
+ pkg_LTLIBRARIES	     = nd_snap.la 
+diff -Naur netdude-0.3.3/protocols/tcp/Makefile.am netdude-0.3.3-p/protocols/tcp/Makefile.am
+--- netdude-0.3.3/protocols/tcp/Makefile.am	Wed Jun 25 18:55:59 2003
++++ netdude-0.3.3-p/protocols/tcp/Makefile.am	Wed Jun 25 18:57:20 2003
+@@ -6,7 +6,7 @@
+ LDFLAGS		     = -L$(top_srcdir)/src
+ INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_builddir)/include -W -Wall
+ 
+-pkgdir		     = $(pkgdatadir)/protocols
++pkgdir		     = $(pkglibdir)/protocols
+ pkgincludedir        = $(includedir)/netdude/protocols/tcp
+ 
+ pkg_LTLIBRARIES	     = nd_tcp.la 
+diff -Naur netdude-0.3.3/protocols/udp/Makefile.am netdude-0.3.3-p/protocols/udp/Makefile.am
+--- netdude-0.3.3/protocols/udp/Makefile.am	Wed Jun 25 18:55:59 2003
++++ netdude-0.3.3-p/protocols/udp/Makefile.am	Wed Jun 25 18:57:17 2003
+@@ -6,7 +6,7 @@
+ LDFLAGS		     = -L$(top_srcdir)/src
+ INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_builddir)/include -W -Wall
+ 
+-pkgdir		     = $(pkgdatadir)/protocols
++pkgdir		     = $(pkglibdir)/protocols
+ pkgincludedir        = $(includedir)/netdude/protocols/udp
+ 
+ pkg_LTLIBRARIES	     = nd_udp.la 
+diff -Naur netdude-0.3.3/configure.ac netdude-0.3.3-p/configure.ac
+--- netdude-0.3.3/configure.ac	Tue Nov 12 18:58:41 2002
++++ netdude-0.3.3-p/configure.ac	Wed Jun 25 20:00:45 2003
+@@ -50,14 +50,14 @@
+ dnl ##################################################
+ dnl # Set PACKAGE_DATA_DIR in config.h.
+ dnl ##################################################
+-if test "x${datadir}" = 'x${prefix}/share'; then
++if test "x${libdir}" = 'x${prefix}/lib'; then
+   if test "x${prefix}" = "xNONE"; then
+-    AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${ac_default_prefix}/share/${PACKAGE}", [The data dir of the package])
++    AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${ac_default_prefix}/lib/${PACKAGE}", [The data dir of the package])
+   else
+-    AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${prefix}/share/${PACKAGE}", [The data dir of the package])
++    AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${prefix}/lib/${PACKAGE}", [The data dir of the package])
+   fi
+ else
+-  AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${datadir}/${PACKAGE}", [The data dir of the package])
++  AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${libdir}/${PACKAGE}", [The data dir of the package])
+ fi
+ 
+ dnl ##################################################

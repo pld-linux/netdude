@@ -1,0 +1,147 @@
+diff -Naur netdude-0.3.3/Makefile.am netdude-0.3.3-p/Makefile.am
+--- netdude-0.3.3/Makefile.am	Thu Oct 24 12:10:50 2002
++++ netdude-0.3.3-p/Makefile.am	Wed Jun 25 18:20:36 2003
+@@ -1,4 +1,4 @@
+-SUBDIRS = libltdl src plugins protocols intl po pixmaps doc
++SUBDIRS = src plugins protocols intl po pixmaps doc
+ 
+ MAINTAINERCLEANFILES = Makefile.in aclocal.m4 config.guess \
+                        config.h.in config.sub configure install-sh \
+diff -Naur netdude-0.3.3/plugins/Makefile.am netdude-0.3.3-p/plugins/Makefile.am
+--- netdude-0.3.3/plugins/Makefile.am	Thu Oct 17 19:42:49 2002
++++ netdude-0.3.3-p/plugins/Makefile.am	Wed Jun 25 18:39:19 2003
+@@ -7,7 +7,7 @@
+ 
+ LIBS                 =
+ LDFLAGS		     = -L$(top_srcdir)/src
+-INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_builddir)/include
++INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_builddir)/include
+ 
+ pkgdir		     = $(pkgdatadir)/plugins
+ 
+diff -Naur netdude-0.3.3/protocols/arp/Makefile.am netdude-0.3.3-p/protocols/arp/Makefile.am
+--- netdude-0.3.3/protocols/arp/Makefile.am	Sun Sep 22 19:26:21 2002
++++ netdude-0.3.3-p/protocols/arp/Makefile.am	Wed Jun 25 18:40:54 2003
+@@ -4,7 +4,7 @@
+ MAINTAINERCLEANFILES = Makefile.in
+ 
+ LDFLAGS		     = -L$(top_srcdir)/src
+-INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_builddir)/include -W -Wall
++INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_builddir)/include -W -Wall
+ 
+ pkgdir		     = $(pkgdatadir)/protocols
+ pkgincludedir        = $(includedir)/netdude/protocols/arp
+diff -Naur netdude-0.3.3/protocols/ether/Makefile.am netdude-0.3.3-p/protocols/ether/Makefile.am
+--- netdude-0.3.3/protocols/ether/Makefile.am	Sun Sep 22 19:25:58 2002
++++ netdude-0.3.3-p/protocols/ether/Makefile.am	Wed Jun 25 18:40:02 2003
+@@ -6,7 +6,7 @@
+ MAINTAINERCLEANFILES = Makefile.in
+ 
+ LDFLAGS		     = -L$(top_srcdir)/src
+-INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_builddir)/include -W -Wall
++INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_builddir)/include -W -Wall
+ 
+ pkgdir		     = $(pkgdatadir)/protocols
+ 
+diff -Naur netdude-0.3.3/protocols/fddi/Makefile.am netdude-0.3.3-p/protocols/fddi/Makefile.am
+--- netdude-0.3.3/protocols/fddi/Makefile.am	Sun Sep 22 19:26:10 2002
++++ netdude-0.3.3-p/protocols/fddi/Makefile.am	Wed Jun 25 18:40:30 2003
+@@ -4,7 +4,7 @@
+ MAINTAINERCLEANFILES = Makefile.in
+ 
+ LDFLAGS		     = -L$(top_srcdir)/src
+-INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_builddir)/include -W -Wall
++INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_builddir)/include -W -Wall
+ 
+ pkgdir		     = $(pkgdatadir)/protocols
+ pkgincludedir        = $(includedir)/netdude/protocols/fddi
+diff -Naur netdude-0.3.3/protocols/icmp/Makefile.am netdude-0.3.3-p/protocols/icmp/Makefile.am
+--- netdude-0.3.3/protocols/icmp/Makefile.am	Sun Sep 22 19:26:06 2002
++++ netdude-0.3.3-p/protocols/icmp/Makefile.am	Wed Jun 25 18:40:12 2003
+@@ -4,7 +4,7 @@
+ MAINTAINERCLEANFILES = Makefile.in
+ 
+ LDFLAGS		     = -L$(top_srcdir)/src
+-INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_srcdir)/include -W -Wall
++INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_srcdir)/include -W -Wall
+ 
+ pkgdir		     = $(pkgdatadir)/protocols
+ pkgincludedir        = $(includedir)/netdude/protocols/icmp
+diff -Naur netdude-0.3.3/protocols/ip/Makefile.am netdude-0.3.3-p/protocols/ip/Makefile.am
+--- netdude-0.3.3/protocols/ip/Makefile.am	Sun Sep 22 19:26:24 2002
++++ netdude-0.3.3-p/protocols/ip/Makefile.am	Wed Jun 25 18:40:58 2003
+@@ -6,7 +6,7 @@
+ MAINTAINERCLEANFILES = Makefile.in
+ 
+ LDFLAGS		     = -L$(top_srcdir)/src
+-INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_builddir)/include -W -Wall
++INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_builddir)/include -W -Wall
+ 
+ pkgdir		     = $(pkgdatadir)/protocols
+ 
+diff -Naur netdude-0.3.3/protocols/linux-sll/Makefile.am netdude-0.3.3-p/protocols/linux-sll/Makefile.am
+--- netdude-0.3.3/protocols/linux-sll/Makefile.am	Sun Sep 22 19:25:46 2002
++++ netdude-0.3.3-p/protocols/linux-sll/Makefile.am	Wed Jun 25 18:39:54 2003
+@@ -4,7 +4,7 @@
+ MAINTAINERCLEANFILES = Makefile.in
+ 
+ LDFLAGS		     = -L$(top_srcdir)/src
+-INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_builddir)/include -W -Wall
++INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_builddir)/include -W -Wall
+ 
+ pkgdir		     = $(pkgdatadir)/protocols
+ pkgincludedir        = $(includedir)/netdude/protocols/sll
+diff -Naur netdude-0.3.3/protocols/snap/Makefile.am netdude-0.3.3-p/protocols/snap/Makefile.am
+--- netdude-0.3.3/protocols/snap/Makefile.am	Sun Sep 22 19:26:02 2002
++++ netdude-0.3.3-p/protocols/snap/Makefile.am	Wed Jun 25 18:40:07 2003
+@@ -4,7 +4,7 @@
+ MAINTAINERCLEANFILES = Makefile.in
+ 
+ LDFLAGS		     = -L$(top_srcdir)/src
+-INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_builddir)/include -W -Wall
++INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_builddir)/include -W -Wall
+ 
+ pkgdir		     = $(pkgdatadir)/protocols
+ pkgincludedir        = $(includedir)/netdude/protocols/snap
+diff -Naur netdude-0.3.3/protocols/tcp/Makefile.am netdude-0.3.3-p/protocols/tcp/Makefile.am
+--- netdude-0.3.3/protocols/tcp/Makefile.am	Sun Sep 22 19:26:17 2002
++++ netdude-0.3.3-p/protocols/tcp/Makefile.am	Wed Jun 25 18:40:48 2003
+@@ -4,7 +4,7 @@
+ MAINTAINERCLEANFILES = Makefile.in
+ 
+ LDFLAGS		     = -L$(top_srcdir)/src
+-INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_builddir)/include -W -Wall
++INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_builddir)/include -W -Wall
+ 
+ pkgdir		     = $(pkgdatadir)/protocols
+ pkgincludedir        = $(includedir)/netdude/protocols/tcp
+diff -Naur netdude-0.3.3/protocols/udp/Makefile.am netdude-0.3.3-p/protocols/udp/Makefile.am
+--- netdude-0.3.3/protocols/udp/Makefile.am	Sun Sep 22 19:26:14 2002
++++ netdude-0.3.3-p/protocols/udp/Makefile.am	Wed Jun 25 18:40:37 2003
+@@ -4,7 +4,7 @@
+ MAINTAINERCLEANFILES = Makefile.in
+ 
+ LDFLAGS		     = -L$(top_srcdir)/src
+-INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_builddir)/include -W -Wall
++INCLUDES	     = @GTK_CFLAGS@ -I$(top_srcdir) -I$(top_builddir)/include -W -Wall
+ 
+ pkgdir		     = $(pkgdatadir)/protocols
+ pkgincludedir        = $(includedir)/netdude/protocols/udp
+diff -Naur netdude-0.3.3/src/Makefile.am netdude-0.3.3-p/src/Makefile.am
+--- netdude-0.3.3/src/Makefile.am	Sun Sep 22 18:35:43 2002
++++ netdude-0.3.3-p/src/Makefile.am	Wed Jun 25 18:39:00 2003
+@@ -1,7 +1,7 @@
+ ## Process this file with automake to produce Makefile.in
+ 
+ INCLUDES = \
+-	-I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_builddir)/include \
++	-I$(top_srcdir) -I$(top_builddir)/include \
+ 	@gtk_cflags@ @glib_cflags@ -W -Wall ## -DMEMDEBUG
+ 
+ bin_PROGRAMS = netdude
+@@ -68,4 +68,4 @@
+ 	support.c support.h \
+ 	gtkhex.c gtkhex.h
+ 
+-netdude_LDADD = $(top_builddir)/libltdl/libltdlc.la @gtk_libs@ @glib_libs@
++netdude_LDADD = -lltdl @gtk_libs@ @glib_libs@
