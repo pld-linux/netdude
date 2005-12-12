@@ -1,0 +1,11 @@
+--- netdude-0.3.3/protocols/fddi/nd_fddi.c~	2002-11-08 18:20:35.000000000 +0100
++++ netdude-0.3.3/protocols/fddi/nd_fddi.c	2005-12-12 22:07:08.000000000 +0100
+@@ -34,8 +34,6 @@
+ #include <nd_fddi.h>
+ #include <nd_fddi_callbacks.h>
+ 
+-#include <net/bpf.h>
+-
+ static ND_ProtoField fddi_fields[] = {
+   { ND_VAL_FIELD, N_("Frame\nCtrl.\n(0x%.2x)"), N_("Frame Control"),    8,  nd_fddi_fc_cb    },
+   { ND_VAL_FIELD, N_("Dst. addr.\n(%s)\n"),     N_("Destination host"), 48, nd_fddi_dhost_cb },
