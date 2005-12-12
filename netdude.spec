@@ -5,10 +5,12 @@ Version:	0.3.3
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/netdude/%{name}-%{version}.tar.gz
+# Source0-md5:	d561feec5388469f3449bb4ba4d89bdf
 Patch0:		%{name}-am.patch
 Patch1:		%{name}-paths.patch
-URL:		http://netdude.sf.net/
+Patch2:		%{name}-bpf.patch
+URL:		http://netdude.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
@@ -33,7 +35,7 @@ wykonaæ szczegó³owe zmiany w pakietach zrzutów z tcpdumpa.
 Summary:	Header files for developing netdude plugins
 Summary(pl):	Pliki nag³ówkowe do budowy wtyczek netdude
 Group:		Development
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{version}
 Obsoletes:	netdude-static
 
 %description devel
@@ -46,6 +48,7 @@ Pliki nag³ówkowe do budowy wtyczek netdude.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 rm -f missing configure.in
