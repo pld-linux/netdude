@@ -35,7 +35,7 @@ wykonaæ szczegó³owe zmiany w pakietach zrzutów z tcpdumpa.
 Summary:	Header files for developing netdude plugins
 Summary(pl):	Pliki nag³ówkowe do budowy wtyczek netdude
 Group:		Development
-Requires:	%{name} = %{version}-%{version}
+Requires:	%{name} = %{version}-%{release}
 Obsoletes:	netdude-static
 
 %description devel
