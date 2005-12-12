@@ -2,7 +2,7 @@ Summary:	Network dump data displayer and editor
 Summary(pl):	Wy¶wietlacz i edytor zrzutów sieciowych
 Name:		netdude
 Version:	0.3.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://dl.sourceforge.net/netdude/%{name}-%{version}.tar.gz
