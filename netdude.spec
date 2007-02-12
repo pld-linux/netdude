@@ -1,5 +1,5 @@
 Summary:	Network dump data displayer and editor
-Summary(pl):	Wy¶wietlacz i edytor zrzutów sieciowych
+Summary(pl.UTF-8):   WyÅ›wietlacz i edytor zrzutÃ³w sieciowych
 Name:		netdude
 Version:	0.3.3
 Release:	2
@@ -25,15 +25,15 @@ Netdude is the NETwork DUmp data Displayer and Editor for tcpdump
 tracefiles. It is a GUI-based tool that allows you to make detailed
 changes to packets in tcpdump tracefiles.
 
-%description -l pl
+%description -l pl.UTF-8
 Netdude (NETwork DUmp data Displayer and Editor) to program do
-wy¶wietlania i edycji plików zrzutów sieciowych (tracefiles) z
-tcpdumpa. Jest to narzêdzie z graficznym interfejsem, pozwalaj±ce
-wykonaæ szczegó³owe zmiany w pakietach zrzutów z tcpdumpa.
+wyÅ›wietlania i edycji plikÃ³w zrzutÃ³w sieciowych (tracefiles) z
+tcpdumpa. Jest to narzÄ™dzie z graficznym interfejsem, pozwalajÄ…ce
+wykonaÄ‡ szczegÃ³Å‚owe zmiany w pakietach zrzutÃ³w z tcpdumpa.
 
 %package devel
 Summary:	Header files for developing netdude plugins
-Summary(pl):	Pliki nag³ówkowe do budowy wtyczek netdude
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe do budowy wtyczek netdude
 Group:		Development
 Requires:	%{name} = %{version}-%{release}
 Obsoletes:	netdude-static
@@ -41,8 +41,8 @@ Obsoletes:	netdude-static
 %description devel
 Header files for developing netdude plugins.
 
-%description devel -l pl
-Pliki nag³ówkowe do budowy wtyczek netdude.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe do budowy wtyczek netdude.
 
 %prep
 %setup -q
