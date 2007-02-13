@@ -1,5 +1,5 @@
 Summary:	Network dump data displayer and editor
-Summary(pl.UTF-8):   Wyświetlacz i edytor zrzutów sieciowych
+Summary(pl.UTF-8):	Wyświetlacz i edytor zrzutów sieciowych
 Name:		netdude
 Version:	0.3.3
 Release:	2
@@ -33,7 +33,7 @@ wykonać szczegółowe zmiany w pakietach zrzutów z tcpdumpa.
 
 %package devel
 Summary:	Header files for developing netdude plugins
-Summary(pl.UTF-8):   Pliki nagłówkowe do budowy wtyczek netdude
+Summary(pl.UTF-8):	Pliki nagłówkowe do budowy wtyczek netdude
 Group:		Development
 Requires:	%{name} = %{version}-%{release}
 Obsoletes:	netdude-static
