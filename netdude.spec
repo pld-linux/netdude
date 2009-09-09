@@ -2,7 +2,7 @@ Summary:	Network dump data displayer and editor
 Summary(pl.UTF-8):	Wyświetlacz i edytor zrzutów sieciowych
 Name:		netdude
 Version:	0.3.3
-Release:	2
+Release:	3
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://dl.sourceforge.net/netdude/%{name}-%{version}.tar.gz
@@ -10,6 +10,7 @@ Source0:	http://dl.sourceforge.net/netdude/%{name}-%{version}.tar.gz
 Patch0:		%{name}-am.patch
 Patch1:		%{name}-paths.patch
 Patch2:		%{name}-bpf.patch
+Patch3:		%{name}-g++4.patch
 URL:		http://netdude.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -49,6 +50,7 @@ Pliki nagłówkowe do budowy wtyczek netdude.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 rm -f missing configure.in
