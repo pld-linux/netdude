@@ -1,0 +1,54 @@
+--- netdude-0.3.3/protocols/icmp/nd_icmp_callbacks.c.org	2009-09-09 03:05:48.000000000 +0200
++++ netdude-0.3.3/protocols/icmp/nd_icmp_callbacks.c	2009-09-09 03:06:21.000000000 +0200
+@@ -78,6 +78,7 @@
+       return;
+ 
+     default:
++	break;
+     }
+   
+   nd_dialog_number(_("Enter ICMP code:"),
+--- netdude-0.3.3/protocols/icmp/nd_icmp.c.org	2009-09-09 03:09:01.000000000 +0200
++++ netdude-0.3.3/protocols/icmp/nd_icmp.c	2009-09-09 03:09:32.000000000 +0200
+@@ -334,6 +334,7 @@
+       break;
+ 
+     default:
++	break;
+     }
+ }
+ 
+@@ -465,6 +466,7 @@
+       }
+ 
+     default:
++	break;
+     }
+ 
+   return FALSE;
+--- netdude-0.3.3/src/nd_plugin.c.org	2009-09-09 02:36:51.000000000 +0200
++++ netdude-0.3.3/src/nd_plugin.c	2009-09-09 02:55:58.000000000 +0200
+@@ -157,8 +157,10 @@
+ static void       
+ plugin_hook_up(ND_Plugin *plugin)
+ {
+-  lt_ptr_t     sym;
++#define lt_ptr_t	lt_ptr
+ 
++  lt_ptr_t     sym;
++#undef lt_ptr_t
+   if ((sym = lt_dlsym(plugin->lt, "name")) != NULL)
+     plugin->name = sym;
+   if ((sym = lt_dlsym(plugin->lt, "description")) != NULL)
+--- netdude-0.3.3/src/nd_protocol_plugin.c.org	2009-09-09 02:58:38.000000000 +0200
++++ netdude-0.3.3/src/nd_protocol_plugin.c	2009-09-09 02:59:19.000000000 +0200
+@@ -167,7 +167,9 @@
+ proto_plugin_hook_up(ND_ProtoPlugin *plugin)
+ {
+   ND_Protocol *proto;
++#define lt_ptr_t	lt_ptr
+   lt_ptr_t     sym;
++#undef lt_ptr_t
+   int          i;
+ 
+   if ((sym = lt_dlsym(plugin->lt, "name")) != NULL)
