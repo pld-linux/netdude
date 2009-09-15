@@ -1,22 +1,28 @@
+#
+# TODO:
+#	- remove version from paths
+#	- fix gettextize
+#
 Summary:	Network dump data displayer and editor
 Summary(pl.UTF-8):	Wyświetlacz i edytor zrzutów sieciowych
 Name:		netdude
-Version:	0.3.3
-Release:	3
-License:	GPL
+Version:	0.5.0
+Release:	0.1
+License:	Distributable
 Group:		Networking/Utilities
 Source0:	http://dl.sourceforge.net/netdude/%{name}-%{version}.tar.gz
-# Source0-md5:	d561feec5388469f3449bb4ba4d89bdf
+# Source0-md5:	af7c302c2aaeee28f4a38d800f2991a0
 Patch0:		%{name}-am.patch
 Patch1:		%{name}-paths.patch
-Patch2:		%{name}-bpf.patch
-Patch3:		%{name}-g++4.patch
+Patch2:		%{name}-lt_ptr.patch
+Patch3:		%{name}-duplicate_files.patch
 URL:		http://netdude.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+#BuildRequires:	gettext-devel
 BuildRequires:	gtk+-devel
 BuildRequires:	libltdl-devel
+BuildRequires:	libnetdude-devel
 BuildRequires:	libpcap-devel
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -53,9 +59,9 @@ Pliki nagłówkowe do budowy wtyczek netdude.
 %patch3 -p1
 
 %build
-rm -f missing configure.in
+rm -f missing
 rm -rf libltdl
-%{__gettextize}
+#%%{__gettextize}
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
@@ -74,23 +80,23 @@ rm -rf $RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{_libdir}/%{name}/*/*.a
 
-%find_lang %{name}
+#%%find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f %{name}.lang
+#%%files -f %{name}.lang
+%files
 %defattr(644,root,root,755)
-%doc ChangeLog README ROADMAP TODO AUTHORS
-%attr(755,root,root) %{_bindir}/*
+%doc ChangeLog COPYING README ROADMAP TODO AUTHORS
+%attr(755,root,root) %{_bindir}/netdude*
 %{_datadir}/%{name}
-%dir %{_libdir}/%{name}
-%dir %{_libdir}/%{name}/plugins
-%dir %{_libdir}/%{name}/protocols
-%attr(755,root,root) %{_libdir}/%{name}/*/*.so
-%{_libdir}/%{name}/*/*.la
+%dir %{_libdir}/%{name}/0.5
+%dir %{_libdir}/%{name}/0.5/plugins
+%dir %{_libdir}/%{name}/0.5/protocols
+%attr(755,root,root) %{_libdir}/%{name}/*/*/*.so
+%{_libdir}/%{name}/*/*/*.la
 %{_mandir}/man*/*
-%{_gtkdocdir}/*
 
 %files devel
 %defattr(644,root,root,755)
