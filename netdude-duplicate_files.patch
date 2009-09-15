@@ -1,0 +1,10 @@
+--- netdude-0.5.0/src/Makefile.am~	2009-09-15 12:33:21.000000000 +0200
++++ netdude-0.5.0/src/Makefile.am	2009-09-15 12:35:52.000000000 +0200
+@@ -30,7 +30,6 @@
+ 	nd_protocol.h \
+ 	nd_protocol_inst.h \
+ 	nd_protocol_plugin.h \
+-	nd_raw_protocol.h \
+ 	nd_recent.h \
+ 	nd_raw_protocol.h \
+ 	nd_timestamp.h \
