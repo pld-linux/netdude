@@ -1,0 +1,22 @@
+--- netdude-0.5.0/src/nd_plugin.c~	2008-08-29 16:03:55.000000000 +0200
++++ netdude-0.5.0/src/nd_plugin.c	2009-09-15 12:31:56.000000000 +0200
+@@ -170,7 +170,7 @@
+ static gboolean
+ plugin_hook_up(ND_Plugin *plugin)
+ {
+-  lt_ptr_t     sym;
++  lt_ptr     sym;
+ 
+   if ((sym = lt_dlsym(plugin->lt, "name")) != NULL)
+     plugin->name = sym;
+--- netdude-0.5.0/src/nd_protocol_plugin.c~	2008-08-29 16:03:55.000000000 +0200
++++ netdude-0.5.0/src/nd_protocol_plugin.c	2009-09-15 12:31:40.000000000 +0200
+@@ -193,7 +193,7 @@
+ proto_plugin_hook_up(ND_ProtoPlugin *plugin)
+ {
+   ND_Protocol *proto_gui;
+-  lt_ptr_t     sym;
++  lt_ptr     sym;
+   int          i;
+ 
+   if ((sym = lt_dlsym(plugin->lt, "name")) != NULL)
