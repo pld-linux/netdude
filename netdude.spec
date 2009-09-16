@@ -91,12 +91,11 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog COPYING README ROADMAP TODO AUTHORS
 %attr(755,root,root) %{_bindir}/netdude*
 %{_datadir}/%{name}
-%dir %{_libdir}/%{name}/0.5
-%dir %{_libdir}/%{name}/0.5/plugins
-%dir %{_libdir}/%{name}/0.5/protocols
-%attr(755,root,root) %{_libdir}/%{name}/*/*/*.so
-%{_libdir}/%{name}/*/*/*.la
-%{_mandir}/man*/*
+%dir %{_libdir}/%{name}/plugins
+%dir %{_libdir}/%{name}/protocols
+%attr(755,root,root) %{_libdir}/%{name}/*/nd*.so
+%{_libdir}/%{name}/*/nd*.la
+%{_mandir}/man1/netdude.1*
 
 %files devel
 %defattr(644,root,root,755)

@@ -5,7 +5,7 @@
  INCLUDES	     = @gtk_cflags@ @LIBNETDUDE_CFLAGS@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major)/plugins
-+pkgdir		     = $(pkglibdir)/$(version_major)/plugins
++pkgdir		     = $(pkglibdir)/plugins
  
  pkg_LTLIBRARIES	     = nd_cksumfix.la
  
@@ -16,7 +16,7 @@
  INCLUDES	     = @gtk_cflags@ @LIBNETDUDE_CFLAGS@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major)/plugins
-+pkgdir		     = $(pkglibdir)/$(version_major)/plugins
++pkgdir		     = $(pkglibdir)/plugins
  
  pkg_LTLIBRARIES	     = nd_bpf.la
  
@@ -27,8 +27,9 @@
                         -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major)/protocols
-+pkgdir		     = $(pkglibdir)/$(version_major)/protocols
- pkgincludedir        = $(includedir)/netdude/$(version_major)/protocols/tcp
++pkgdir		     = $(pkglibdir)/protocols
+-pkgincludedir        = $(includedir)/netdude/$(version_major)/protocols/tcp
++pkgincludedir        = $(includedir)/netdude/protocols/tcp
  
  pkg_LTLIBRARIES	     = nd_tcp.la 
 --- netdude-0.5.0/protocols/linux-sll/Makefile.am~	2009-09-14 15:10:25.000000000 +0200
@@ -38,8 +39,9 @@
                         -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major)/protocols
-+pkgdir		     = $(pkglibdir)/$(version_major)/protocols
- pkgincludedir        = $(includedir)/netdude/$(version_major)/protocols/linux-sll
++pkgdir		     = $(pkglibdir)/protocols
+-pkgincludedir        = $(includedir)/netdude/$(version_major)/protocols/linux-sll
++pkgincludedir        = $(includedir)/netdude/protocols/linux-sll
  
  pkg_LTLIBRARIES	     = nd_sll.la 
 --- netdude-0.5.0/protocols/fddi/Makefile.am~	2009-09-14 15:10:25.000000000 +0200
@@ -49,8 +51,9 @@
                         -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major)/protocols
-+pkgdir		     = $(pkglibdir)/$(version_major)/protocols
- pkgincludedir        = $(includedir)/netdude/$(version_major)/protocols/fddi
++pkgdir		     = $(pkglibdir)/protocols
+-pkgincludedir        = $(includedir)/netdude/$(version_major)/protocols/fddi
++pkgincludedir        = $(includedir)/netdude/protocols/fddi
  
  pkg_LTLIBRARIES	     = nd_fddi.la 
 --- netdude-0.5.0/protocols/ip/Makefile.am~	2009-09-14 15:10:25.000000000 +0200
@@ -60,8 +63,9 @@
                         -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major)/protocols
-+pkgdir		     = $(pkglibdir)/$(version_major)/protocols
- pkgincludedir        = $(includedir)/netdude/$(version_major)/protocols/ip
++pkgdir		     = $(pkglibdir)/protocols
+-pkgincludedir        = $(includedir)/netdude/$(version_major)/protocols/ip
++pkgincludedir        = $(includedir)/netdude/protocols/ip
  
  pkg_LTLIBRARIES	     = nd_ip.la 
 --- netdude-0.5.0/protocols/vlan/Makefile.am~	2009-09-14 15:10:25.000000000 +0200
@@ -71,8 +75,9 @@
                         -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major)/protocols
-+pkgdir		     = $(pkglibdir)/$(version_major)/protocols
- pkgincludedir        = $(includedir)/netdude/$(version_major)/protocols/vlan
++pkgdir		     = $(pkglibdir)/protocols
+-pkgincludedir        = $(includedir)/netdude/$(version_major)/protocols/vlan
++pkgincludedir        = $(includedir)/netdude/protocols/vlan
  
  pkg_LTLIBRARIES	     = nd_vlan.la 
 --- netdude-0.5.0/protocols/icmp/Makefile.am~	2009-09-14 15:10:25.000000000 +0200
@@ -82,8 +87,9 @@
                         -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major)/protocols
-+pkgdir		     = $(pkglibdir)/$(version_major)/protocols
- pkgincludedir        = $(includedir)/netdude/$(version_major)/protocols/icmp
++pkgdir		     = $(pkglibdir)/protocols
+-pkgincludedir        = $(includedir)/netdude/$(version_major)/protocols/icmp
++pkgincludedir        = $(includedir)/netdude/protocols/icmp
  
  pkg_LTLIBRARIES	     = nd_icmp.la 
 --- netdude-0.5.0/protocols/ether/Makefile.am~	2009-09-14 15:10:25.000000000 +0200
@@ -93,8 +99,9 @@
                         -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major)/protocols
-+pkgdir		     = $(pkglibdir)/$(version_major)/protocols
- pkgincludedir        = $(includedir)/netdude/$(version_major)/protocols/ether
++pkgdir		     = $(pkglibdir)/protocols
+-pkgincludedir        = $(includedir)/netdude/$(version_major)/protocols/ether
++pkgincludedir        = $(includedir)/netdude/protocols/ether
  
  pkg_LTLIBRARIES	     = nd_ethernet.la 
 --- netdude-0.5.0/protocols/pcap/Makefile.am~	2009-09-14 15:10:25.000000000 +0200
@@ -104,8 +111,9 @@
                         -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major)/protocols
-+pkgdir		     = $(pkglibdir)/$(version_major)/protocols
- pkgincludedir        = $(includedir)/netdude/$(version_major)/protocols/pcap
++pkgdir		     = $(pkglibdir)/protocols
+-pkgincludedir        = $(includedir)/netdude/$(version_major)/protocols/pcap
++pkgincludedir        = $(includedir)/netdude/protocols/pcap
  
  pkg_LTLIBRARIES	     = nd_pcap.la 
 --- netdude-0.5.0/protocols/arp/Makefile.am~	2009-09-14 15:10:25.000000000 +0200
@@ -115,8 +123,9 @@
                         -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major)/protocols
-+pkgdir		     = $(pkglibdir)/$(version_major)/protocols
- pkgincludedir        = $(includedir)/netdude/$(version_major)/protocols/arp
++pkgdir		     = $(pkglibdir)/protocols
+-pkgincludedir        = $(includedir)/netdude/$(version_major)/protocols/arp
++pkgincludedir        = $(includedir)/netdude/protocols/arp
  
  pkg_LTLIBRARIES	     = nd_arp.la 
 --- netdude-0.5.0/protocols/snap/Makefile.am~	2009-09-14 15:10:25.000000000 +0200
@@ -126,8 +135,9 @@
                         -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major)/protocols
-+pkgdir		     = $(pkglibdir)/$(version_major)/protocols
- pkgincludedir        = $(includedir)/netdude/$(version_major)/protocols/snap
++pkgdir		     = $(pkglibdir)/protocols
+-pkgincludedir        = $(includedir)/netdude/$(version_major)/protocols/snap
++pkgincludedir        = $(includedir)/netdude/protocols/snap
  
  pkg_LTLIBRARIES	     = nd_snap.la 
 --- netdude-0.5.0/protocols/udp/Makefile.am~	2009-09-14 15:10:25.000000000 +0200
@@ -137,10 +147,31 @@
                         -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major)/protocols
-+pkgdir		     = $(pkglibdir)/$(version_major)/protocols
- pkgincludedir        = $(includedir)/netdude/$(version_major)/protocols/udp
++pkgdir		     = $(pkglibdir)/protocols
+-pkgincludedir        = $(includedir)/netdude/$(version_major)/protocols/udp
++pkgincludedir        = $(includedir)/netdude/protocols/udp
  
  pkg_LTLIBRARIES	     = nd_udp.la 
+--- netdude-0.5.0/pixmaps/Makefile.am~  2003-02-02 17:30:38.000000000 +0100
++++ netdude-0.5.0/pixmaps/Makefile.am   2009-09-16 09:06:06.000000000 +0200
+@@ -1,5 +1,5 @@
+
+-pixmapsdir = $(pkgdatadir)/$(version_major)/pixmaps
++pixmapsdir = $(pkgdatadir)/pixmaps
+
+ pixmaps_DATA = \
+        incomplete.xpm \
+--- netdude-0.5.0/src/Makefile.am~      2009-09-16 09:27:42.000000000 +0200
++++ netdude-0.5.0/src/Makefile.am       2009-09-16 09:29:10.000000000 +0200
+@@ -9,7 +9,7 @@
+
+ bin_PROGRAMS = netdude
+
+-pkgincludedir = $(includedir)/netdude/$(version_major)
++pkgincludedir = $(includedir)/netdude
+
+ pkginclude_HEADERS = \
+        nd.h  \
 --- netdude-0.5.0/configure.in~	2008-08-28 15:58:22.000000000 +0200
 +++ netdude-0.5.0/configure.in	2009-09-14 15:22:48.000000000 +0200
 @@ -80,14 +80,14 @@
@@ -162,3 +193,89 @@
  fi
  packagedatadir=`eval eval eval eval "echo $packagedatadir"`
  AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${packagedatadir}", [The data dir of the package])
+ 
+--- netdude-0.5.0/src/nd_gui.c~	2008-08-29 16:03:55.000000000 +0200
++++ netdude-0.5.0/src/nd_gui.c	2009-09-16 13:53:38.000000000 +0200
+@@ -116,7 +116,7 @@
+   gtk_widget_realize(win);
+   incomplete_pmap = gdk_pixmap_create_from_xpm(win->window, &incomplete_mask,
+ 					       &gs->bg[GTK_STATE_NORMAL],
+-					       PACKAGE_DATA_DIR "/" VERSION_MAJOR "/pixmaps/incomplete.xpm");
++					       "/usr/share/netdude/pixmaps/incomplete.xpm");
+ 
+   /* Init red and yellow: */
+   for (i = 0; i < 5; i++)
+--- netdude-0.5.0/src/nd_prefs.c~	2008-08-29 16:03:55.000000000 +0200
++++ netdude-0.5.0/src/nd_prefs.c	2009-09-16 13:57:36.000000000 +0200
+@@ -81,8 +81,8 @@
+   if (dir[0] != 0)
+     return dir;
+ 
+-  g_snprintf(dir, MAXPATHLEN, "%s/%s/plugins",
+-	     PACKAGE_DATA_DIR, VERSION_MAJOR);
++  g_snprintf(dir, MAXPATHLEN, "%s/plugins",
++	     PACKAGE_DATA_DIR);
+ 
+   return dir;
+ }
+@@ -96,8 +96,8 @@
+   if (dir[0] != 0)
+     return dir;
+ 
+-  g_snprintf(dir, MAXPATHLEN, "%s/%s/plugins",
+-	     libnd_prefs_get_netdude_dir(), VERSION_MAJOR);
++  g_snprintf(dir, MAXPATHLEN, "%s/plugins",
++	     libnd_prefs_get_netdude_dir());
+ 
+   return dir;
+ }
+@@ -111,8 +111,8 @@
+   if (dir[0] != 0)
+     return dir;
+ 
+-  g_snprintf(dir, MAXPATHLEN, "%s/%s/protocols",
+-	     PACKAGE_DATA_DIR, VERSION_MAJOR);
++  g_snprintf(dir, MAXPATHLEN, "%s/protocols",
++	     PACKAGE_DATA_DIR);
+ 
+   return dir;
+ }
+@@ -126,8 +126,8 @@
+   if (dir[0] != 0)
+     return dir;
+ 
+-  g_snprintf(dir, MAXPATHLEN, "%s/%s/protocols",
+-	     libnd_prefs_get_netdude_dir(), VERSION_MAJOR);
++  g_snprintf(dir, MAXPATHLEN, "%s/protocols",
++	     libnd_prefs_get_netdude_dir());
+ 
+   return dir;
+ }
+--- netdude-0.5.0/src/nd_main.c~	2008-08-29 16:03:55.000000000 +0200
++++ netdude-0.5.0/src/nd_main.c	2009-09-16 14:05:05.000000000 +0200
+@@ -154,14 +154,14 @@
+ 	}
+       else if (!strcmp(argv[i], "--include-dir"))
+ 	{
+-	  printf("%s\n", PACKAGE_INCLUDE_DIR"/netdude/"VERSION_MAJOR);
++	  printf("%s\n", PACKAGE_INCLUDE_DIR"/netdude");
+ 	  exit(0);
+ 	}
+       else if (!strcmp(argv[i], "--cflags"))
+ 	{
+ 	  printf("%s %s -I%s\n",
+ 		 LIBNETDUDE_CFLAGS, GTK_CFLAGS,
+-		 PACKAGE_INCLUDE_DIR"/netdude/"VERSION_MAJOR);
++		 PACKAGE_INCLUDE_DIR"/netdude");
+ 	  exit(0);
+ 	}
+       else if (!strcmp(argv[i], "--proto-dir"))
+@@ -486,7 +486,7 @@
+   gtk_set_locale ();
+   gtk_init (&argc, &argv);
+ 
+-  add_pixmap_directory (PACKAGE_DATA_DIR "/" VERSION_MAJOR "/pixmaps");
++  add_pixmap_directory ("/usr/share/netdude/pixmaps");
+   add_pixmap_directory (PACKAGE_SOURCE_DIR "/pixmaps");
+ 
+   /*
