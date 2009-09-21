@@ -1,6 +1,5 @@
 #
 # TODO:
-#	- remove version from paths
 #	- fix gettextize
 #
 Summary:	Network dump data displayer and editor
