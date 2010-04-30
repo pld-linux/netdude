@@ -172,28 +172,6 @@
 
  pkginclude_HEADERS = \
         nd.h  \
---- netdude-0.5.0/configure.in~	2008-08-28 15:58:22.000000000 +0200
-+++ netdude-0.5.0/configure.in	2009-09-14 15:22:48.000000000 +0200
-@@ -80,14 +80,14 @@
- dnl ##################################################
- dnl # Set PACKAGE_DATA_DIR in config.h.
- dnl ##################################################
--if test "x${datadir}" = 'x${prefix}/share'; then
-+if test "x${libdir}" = 'x${prefix}/lib'; then
-   if test "x${prefix}" = "xNONE"; then
--    packagedatadir="${ac_default_prefix}/share/${PACKAGE}"
-+    packagedatadir="${ac_default_prefix}/lib/${PACKAGE}"
-   else
--    packagedatadir="${prefix}/share/${PACKAGE}"
-+    packagedatadir="${prefix}/lib/${PACKAGE}"
-   fi
- else
--  packagedatadir="${datadir}/${PACKAGE}"
-+  packagedatadir="${libdir}/${PACKAGE}"
- fi
- packagedatadir=`eval eval eval eval "echo $packagedatadir"`
- AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${packagedatadir}", [The data dir of the package])
- 
 --- netdude-0.5.0/src/nd_gui.c~	2008-08-29 16:03:55.000000000 +0200
 +++ netdude-0.5.0/src/nd_gui.c	2009-09-16 13:53:38.000000000 +0200
 @@ -116,7 +116,7 @@
