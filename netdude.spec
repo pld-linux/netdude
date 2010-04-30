@@ -1,20 +1,21 @@
 #
 # TODO:
 #	- fix gettextize
+#	- segfault
 #
 Summary:	Network dump data displayer and editor
 Summary(pl.UTF-8):	Wyświetlacz i edytor zrzutów sieciowych
 Name:		netdude
-Version:	0.5.0
-Release:	2
+Version:	0.5.1
+Release:	0.1
 License:	Distributable
 Group:		Networking/Utilities
-Source0:	http://dl.sourceforge.net/netdude/%{name}-%{version}.tar.gz
-# Source0-md5:	af7c302c2aaeee28f4a38d800f2991a0
+Source0:	http://downloads.sourceforge.net/netdude/%{name}-%{version}.tar.gz
+# Source0-md5:	a660402e2f3feb605c3efdd69e79dcc2
 Patch0:		%{name}-am.patch
 Patch1:		%{name}-paths.patch
-Patch2:		%{name}-lt_ptr.patch
-Patch3:		%{name}-duplicate_files.patch
+Patch2:		%{name}-duplicate_files.patch
+Patch3:		%{name}-exec.patch
 URL:		http://netdude.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -79,6 +80,9 @@ rm -rf $RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{_libdir}/%{name}/*/*.a
 
+# rename binary
+mv $RPM_BUILD_ROOT%{_bindir}/netdude0.5 $RPM_BUILD_ROOT%{_bindir}/netdude
+
 #%%find_lang %{name}
 
 %clean
@@ -90,6 +94,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog COPYING README ROADMAP TODO AUTHORS
 %attr(755,root,root) %{_bindir}/netdude*
 %{_datadir}/%{name}
+%dir %{_libdir}/%{name}
 %dir %{_libdir}/%{name}/plugins
 %dir %{_libdir}/%{name}/protocols
 %attr(755,root,root) %{_libdir}/%{name}/*/nd*.so
